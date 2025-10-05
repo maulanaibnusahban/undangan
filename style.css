@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.great-vibes {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+@keyframes flowerInTopLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-80px, -80px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes flowerInTopRight {
+  0% {
+    opacity: 0;
+    transform: translate(80px, -80px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes flowerInBottomLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-80px, 80px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes flowerInBottomRight {
+  0% {
+    opacity: 0;
+    transform: translate(80px, 80px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+/* Kelas animasi */
+.animate-flower-in-left {
+  animation: flowerInTopLeft 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+.animate-flower-in-right {
+  animation: flowerInTopRight 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+.animate-flower-in-bottom-left {
+  animation: flowerInBottomLeft 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+.animate-flower-in-bottom-right {
+  animation: flowerInBottomRight 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.flower-move {
+  opacity: 0;
+}
