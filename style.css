@@ -24,7 +24,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 2rem;
-  border-radius: 10px;
+  border-radius: 50px;
 }
 
 .button-open-invitation:hover {
@@ -33,66 +33,66 @@
   transition: background-color 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-/* @keyframes flowerInTopLeft {
-  0% {
-    opacity: 0;
-    transform: translate(-80px, -80px) scale(0.8);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0, 0) scale(1);
-  }
-}
 
-@keyframes flowerInTopRight {
-  0% {
-    opacity: 0;
-    transform: translate(10px, -10px) scale(0.8);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0, 0) scale(1);
-  }
-}
-
-/* @keyframes flowerInBottomLeft {
-  0% {
-    opacity: 0;
-    transform: translate(-80px, 80px) scale(0.8);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0, 0) scale(1);
-  }
-} */
-
-/* @keyframes flowerInBottomRight {
-  0% {
-    opacity: 0;
-    transform: translate(80px, 80px) scale(0.8);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0, 0) scale(1);
-  }
-}
-
-.animate-flower-in-left {
-  animation: flowerInTopLeft 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-.animate-flower-in-right {
-  animation: flowerInTopRight 1s ease forwards;
-}
-
-.animate-flower-in-bottom-left {
-  animation: flowerInBottomLeft 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-.animate-flower-in-bottom-right {
-  animation: flowerInBottomRight 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-.flower-move {
+/* Fade transition */
+.fade-overlay {
+  position: fixed;
+  inset: 0;
+  background: white;
   opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transition: opacity 0.8s ease-in-out;
 }
-   */
+
+.fade-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.section-hidden {
+  display: none;
+}
+
+.section-visible {
+  display: flex;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease-out;
+}
+
+.arrow-bottom {
+  margin-top: 20px;
+}
+
+.main-ucapan {
+  padding: 0 1rem;
+}
+
+.section-main {
+  padding: 5rem 1rem 5rem 1rem;
+}
+
+.section-card {
+  margin-top: 1.5rem;
+}
+
+.section-card .card {
+  padding: 1.5rem;
+}
+
+.section-card .card .foto_mempelai {
+  margin-bottom: 1rem;
+}
