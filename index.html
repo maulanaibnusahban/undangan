@@ -14,7 +14,7 @@
   </head>
   <body class="relative min-h-screen flex flex-col items-center justify-center">
     <div id="fadeOverlay" class="fade-overlay"></div>
-    <section id="coverSection" class="section-visible relative min-h-screen w-full flex-col items-center justify-center overflow-hidden">
+    <section id="coverSection" class="section-hidden relative min-h-screen w-full flex-col items-center justify-center overflow-hidden">
       <!-- section vsisible -->
       <img src="asset/Floral_Element_left.png" class="absolute top-0 left-0 w-42 h-42 lg:w-72 lg:h-62" alt="flora left" />
       <img src="asset/Floral_Element_right.png" class="absolute top-0 right-0 w-42 h-42 lg:w-72 lg:h-62" alt="flora right" />
@@ -52,7 +52,8 @@
         </div>
       </div>
     </section>
-    <section id="mainSection" class="section-hidden flex flex-col w-full">
+    <section id="mainSection" class="section-visible flex flex-col w-full">
+      <audio src="asset/audio.m4a" autoplay loop class="hidden"></audio>
       <!-- section hidden -->
       <div class="fixed -z-10 inset-0 overflow-hidden">
         <img src="asset/Floral_Element_left.png" class="absolute top-0 left-0 w-42 h-42 lg:w-72 lg:h-62" alt="flora left" />
@@ -92,11 +93,14 @@
         </div>
       </div>
 
-      <div class="section-main bg-white w-full relative flex flex-col items-center gap-12">
+      <div class="section-main bg-white w-full relative flex flex-col items-center">
         <img src="asset/Floral_Element_bottom_left.png" class="rotate-180 absolute top-0 w-32 right-0 lg:w-72" alt="flora top right" />
         <img src="asset/Floral_Element_bottom_left.png" class="rotate-180 absolute top-0 left-0 scale-x-[-1] w-32 lg:w-72" alt="flora top left" />
 
-        <div class="playfair-display font-semibold max-w-3xl flex flex-col items-center justify-center gap-6 text-center text-gray-800">
+        <div
+          class="quote playfair-display font-semibold max-w-3xl flex flex-col items-center justify-center gap-6 text-center text-gray-800"
+          style="padding: 1rem 1rem 2rem 1rem"
+        >
           <img src="asset/image.png" alt="element-top" class="w-18 lg:w-32" />
           <div id="quote_quran" class="flex flex-col items-center gap-2">
             <h2 class="text-sm lg:text-2xl">
@@ -107,15 +111,15 @@
           </div>
           <img src="asset/image.png" alt="element-top" class="w-18 lg:w-32" />
         </div>
-        <span class="w-full h-[1px] bg-pink-400 block"></span>
-        <div class="flex flex-col w-full items-center justify-center gap-2">
+        <span class="w-[90%] h-[1px] bg-pink-400 block"></span>
+        <div class="flex flex-col w-full items-center justify-center gap-2" style="padding: 2rem 1rem 3rem 1rem">
           <div class="flex flex-col text-center text-gray-800 gap-3">
             <h1 class="text-4xl lg:text-6xl font-bold great-vibes">Mempelai</h1>
             <p class="text-sm lg:text-lg playfair-display">Dengan segala kerendahan hati, kami bermaksud mengundang Bapak/Ibu/Saudara/i</p>
           </div>
-          <div class="section-card flex flex-col lg:flex-row items-center justify-center gap-12">
+          <div class="section-card w-full flex flex-col lg:flex-row items-center justify-center gap-12">
             <div
-              class="card bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center lg:w-[320px] gap-1"
+              class="card bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center w-full md:w-[320px] gap-1"
             >
               <img
                 src="asset/mempelai_pria.jpg"
@@ -137,7 +141,7 @@
 
             <!-- Card Mempelai Wanita -->
             <div
-              class="card bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center lg:w-[320px]"
+              class="card bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center w-full md:w-[320px]"
             >
               <img
                 src="asset/mempelai_wanita.jpg"
@@ -152,6 +156,36 @@
               </a>
             </div>
           </div>
+        </div>
+        <div class="menghitung_hari w-full flex flex-col items-center justify-center gap-8 lg:gap-10 bg-pink-300 py-24" style="padding: 3rem 0.5rem">
+          <h2 class="text-4xl lg:text-6xl font-semibold text-black great-vibes">Menghitung Hari</h2>
+
+          <div id="countdown" class="grid grid-cols-2 sm:grid-cols-4 gap-3 lg:gap-6 text-gray-800 playfair-display">
+            <div class="flex flex-col items-center justify-center bg-white rounded-xl shadow-lg w-28 h-25 sm:w-32 sm:h-30">
+              <span id="days" class="text-4xl lg:text-6xl font-bold">00</span>
+              <span class="text-sm lg:text-lg">Hari</span>
+            </div>
+
+            <div class="flex flex-col items-center justify-center bg-white rounded-xl shadow-lg w-28 h-25 sm:w-32 sm:h-30">
+              <span id="jam" class="text-4xl lg:text-6xl font-bold">00</span>
+              <span class="text-sm lg:text-lg">Jam</span>
+            </div>
+
+            <div class="flex flex-col items-center justify-center bg-white rounded-xl shadow-lg w-28 h-25 sm:w-32 sm:h-30">
+              <span id="menit" class="text-4xl lg:text-6xl font-bold">00</span>
+              <span class="text-sm lg:text-lg">Menit</span>
+            </div>
+
+            <div class="flex flex-col items-center justify-center bg-white rounded-xl shadow-lg w-28 h-25 sm:w-32 sm:h-30">
+              <span id="detik" class="text-4xl lg:text-6xl font-bold">00</span>
+              <span class="text-sm lg:text-lg">Detik</span>
+            </div>
+          </div>
+        </div>
+        <div class="relative h-[300px] w-full flex flex-col items-center justify-center gap-12" style="padding: 3rem 0.5rem">
+          <img src="asset/Floral_Element_bottom_left.png" class="rotate-180 absolute top-0 w-32 right-0 lg:w-72" alt="flora top right" />
+          <img src="asset/Floral_Element_bottom_left.png" class="rotate-180 absolute top-0 left-0 scale-x-[-1] w-32 lg:w-72" alt="flora top left" />
+          cek
         </div>
       </div>
     </section>
