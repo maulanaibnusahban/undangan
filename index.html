@@ -14,7 +14,7 @@
   </head>
   <body class="relative min-h-screen flex flex-col items-center justify-center">
     <div id="fadeOverlay" class="fade-overlay"></div>
-    <section id="coverSection" class="section-visible relative min-h-screen w-full flex-col items-center justify-center overflow-hidden">
+    <section id="coverSection" class="section-visisble relative min-h-screen w-full flex-col items-center justify-center overflow-hidden">
       <!-- section vsisible -->
       <img src="asset/Floral_Element_left.png" class="absolute top-0 left-0 w-42 h-42 lg:w-72 lg:h-62" alt="flora left" />
       <img src="asset/Floral_Element_right.png" class="absolute top-0 right-0 w-42 h-42 lg:w-72 lg:h-62" alt="flora right" />
@@ -53,7 +53,7 @@
       </div>
     </section>
     <section id="mainSection" class="section-hidden flex flex-col w-full">
-      <audio src="asset/audio.m4a" autoplay loop class="hidden"></audio>
+      <!-- <audio src="asset/audio.m4a" autoplay loop class="hidden"></audio> -->
       <!-- section hidden -->
       <div class="fixed -z-10 inset-0 overflow-hidden">
         <img src="asset/Floral_Element_left.png" class="absolute top-0 left-0 w-42 h-42 lg:w-72 lg:h-62" alt="flora left" />
@@ -118,9 +118,7 @@
             <p class="text-sm lg:text-lg playfair-display">Dengan segala kerendahan hati, kami bermaksud mengundang Bapak/Ibu/Saudara/i</p>
           </div>
           <div class="section-card w-full flex flex-col lg:flex-row items-center justify-center gap-12">
-            <div
-              class="card bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center w-full md:w-[320px] gap-1"
-            >
+            <div class="card bg-white rounded-2xl border-2 border-pink-300 flex flex-col items-center text-center w-full md:w-[320px] gap-1">
               <img
                 src="asset/mempelai_pria.jpg"
                 alt="Mempelai Pria"
@@ -140,9 +138,8 @@
             </div>
 
             <!-- Card Mempelai Wanita -->
-            <div
-              class="card bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center w-full md:w-[320px]"
-            >
+            <div <div class="card bg-white rounded-2xl border-2 border-pink-300 flex flex-col items-center text-center w-full md:w-[320px] gap-1">
+              >
               <img
                 src="asset/mempelai_wanita.jpg"
                 alt="Mempelai Wanita"
@@ -157,7 +154,7 @@
             </div>
           </div>
         </div>
-        <div class="menghitung_hari w-full flex flex-col items-center justify-center gap-8 lg:gap-10 bg-pink-300 py-24" style="padding: 3rem 0.5rem">
+        <div class="menghitung_hari w-full flex flex-col items-center justify-center gap-8 lg:gap-10 bg-pink-50 py-24" style="padding: 3rem 0.5rem">
           <h2 class="text-4xl lg:text-6xl font-semibold text-black great-vibes">Menghitung Hari</h2>
 
           <div id="countdown" class="grid grid-cols-2 sm:grid-cols-4 gap-3 lg:gap-6 text-gray-800 playfair-display">
@@ -182,10 +179,59 @@
             </div>
           </div>
         </div>
-        <div class="relative h-[300px] w-full flex flex-col items-center justify-center gap-12" style="padding: 3rem 0.5rem">
-          <img src="asset/Floral_Element_bottom_left.png" class="rotate-180 absolute top-0 w-32 right-0 lg:w-72" alt="flora top right" />
+        <div class="relative w-full flex flex-col items-center justify-center" style="padding: 3rem 1rem">
+          <!-- Ornamen bunga -->
+          <img src="asset/Floral_Element_bottom_left.png" class="rotate-180 absolute top-0 right-0 w-32 lg:w-72" alt="flora top right" />
           <img src="asset/Floral_Element_bottom_left.png" class="rotate-180 absolute top-0 left-0 scale-x-[-1] w-32 lg:w-72" alt="flora top left" />
-          cek
+
+          <!-- Judul -->
+          <div class="flex flex-col items-center text-center max-w-2xl gap-8" style="margin-bottom: 2rem">
+            <img src="asset/image.png" alt="element-top" class="w-18 lg:w-32" />
+            <h2 class="text-4xl lg:text-6xl font-semibold great-vibes" style="margin-bottom: 0.6px">With Love</h2>
+          </div>
+
+          <!-- Grid Card -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
+            <!-- Card Akad -->
+            <div class="bg-white border-2 border-pink-200 rounded-2xl shadow-md flex flex-col items-center text-center" style="padding: 2rem">
+              <h3 class="text-3xl font-semibold text-pink-500 great-vibes" style="margin-bottom: 1rem">Akad Nikah</h3>
+              <div class="text-gray-800 text-base flex flex-col items-start gap-2" style="margin-bottom: 1.5rem">
+                <p class="flex items-center justify-center gap-2">
+                  <span><img src="asset/calender_icon.svg" alt="" class="w-5 h-5" /></span> Jumat, 19 September 2025
+                </p>
+                <p class="flex items-center justify-center gap-2">
+                  <span><img src="asset/clock_icon.svg" alt="" class="w-5 h-5" /></span> 08.00 - 10.00 WIB
+                </p>
+                <p class="flex items-center justify-center gap-2">
+                  <span><img src="asset/location_icon.svg" alt="" class="w-5 h-5" /></span> Masjid Al-Ikhlas
+                </p>
+                <p class="text-gray-600 text-sm">Jl. Contoh No. 123, Jakarta</p>
+              </div>
+              <a href="" class="bg-pink-300 hover:bg-pink-400 text-white w-full font-semibold rounded-lg transition" style="padding: 0.5rem 1rem">
+                Lihat Lokasi
+              </a>
+            </div>
+
+            <!-- Card Resepsi -->
+            <div class="bg-white border-2 border-pink-200 rounded-2xl shadow-md flex flex-col items-center text-center" style="padding: 2rem">
+              <h3 class="text-3xl font-semibold text-pink-500 great-vibes" style="margin-bottom: 1rem">Resepsi</h3>
+              <div class="text-gray-800 text-base flex flex-col items-start gap-2" style="margin-bottom: 1.5rem">
+                <p class="flex items-center justify-center gap-2">
+                  <span><img src="asset/calender_icon.svg" alt="" class="w-5 h-5" /></span> Jumat, 19 September 2025
+                </p>
+                <p class="flex items-center justify-center gap-2">
+                  <span><img src="asset/clock_icon.svg" alt="" class="w-5 h-5" /></span> 08.00 - 10.00 WIB
+                </p>
+                <p class="flex items-center justify-center gap-2">
+                  <span><img src="asset/location_icon.svg" alt="" class="w-5 h-5" /></span> Masjid Al-Ikhlas
+                </p>
+                <p class="text-gray-600 text-sm">Jl. Contoh No. 123, Jakarta</p>
+              </div>
+              <a href="" class="bg-pink-300 hover:bg-pink-400 text-white w-full font-semibold rounded-lg transition" style="padding: 0.5rem 1rem">
+                Lihat Lokasi
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
